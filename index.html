@@ -1,1 +1,79 @@
-Hiii
+import java.util.LinkedList;
+
+public class LinkedList1 {
+   public static void main(String args[]) {
+      // create a linked list
+      LinkedList<String> list = new LinkedList<String>();
+
+      // add elements to the linked list
+      list.add("Node1");
+      list.add("Node2");
+      list.add("Node3");
+      list.add("Node4");
+
+      // print the linked list
+      System.out.println("Linked list : " + list);
+   }
+
+   Node head;
+        
+   static class Node {
+       int data;
+       Node next;
+       
+       Node(int d) {
+           data = d;
+           next = null;
+       }
+   }
+   
+   public void insertion_at_end(int new_data) {
+       Node new_node = new Node(new_data);
+       
+       if(head == null) {
+           head = new_node;
+           return;
+       }
+       
+       Node temp = head;
+       
+       while(temp.next != null) {
+           temp = temp.next;
+       }
+       
+       temp.next = new_node;
+   }
+   
+   public void printList() {
+       Node temp = head;
+       
+       while(temp != null) {
+           System.out.println(temp.data + " ");
+           temp = temp.next;
+       }
+
+       public class Display {
+         public void display(int number) {
+            switch (number) {
+               case 1:
+                  System.out.println("One");
+                  break;
+               case 2:
+                  System.out.println("Two");
+                  break;
+               case 3:
+                  System.out.println("Three");
+                  break;
+               case 4:
+                  System.out.println("Four");
+                  break;
+               case 5:
+                  System.out.println("Five");
+                  break;
+               default:
+                  System.out.println("Unknown Number");
+                  break;
+            }
+         }
+      }
+}
